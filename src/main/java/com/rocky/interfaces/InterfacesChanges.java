@@ -4,7 +4,11 @@ package com.rocky.interfaces;
 /**
  * The supported members in an interface from Java 9 onwards are static constants,
  * abstract methods, default methods, static methods, private methods,
- * nested classes, nested interfaces, nested enums, and nested annotations
+ * nested classes, nested interfaces, nested enums, and nested annotations.
+ *
+ * ONLY Private implementation methods allowed.
+ *
+ * Check this for more information: https://www.journaldev.com/12850/java-9-private-methods-interfaces
  * @param <T>
  */
 interface InterfaceChanges<T> {
@@ -26,7 +30,12 @@ interface InterfaceChanges<T> {
     // can call privateStatic method here
   }
 
-  private int privateMethod(int x, int y) {
+  private int privateMethod1(int x, int y) {
+    // private method implementation
+    return x;
+  }
+
+  private int privateMethod2(int x, int y) {
     // private method implementation
     return x;
   }
