@@ -1,4 +1,4 @@
-package com.rocky;
+package com.rocky.string;
 
 public class StringChanges {
 
